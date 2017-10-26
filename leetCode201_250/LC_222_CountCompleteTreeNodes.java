@@ -23,7 +23,7 @@ public class LC_222_CountCompleteTreeNodes {
 			rightDepth++;
 		}
 		if(leftDepth==rightDepth) {
-			return 1<<leftDepth -1;
+			return (1<<leftDepth) -1;
 		}else {
 			return countNodes(root.left)+countNodes(root.right) +1;
 		}
