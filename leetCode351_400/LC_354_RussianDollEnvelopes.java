@@ -31,6 +31,7 @@ public class LC_354_RussianDollEnvelopes {
 			}	
         };
         Arrays.sort(envelopes, com);
+        int max=1;
         for(int i=1;i<len;i++) {
         	dp[i]=1;
         	for(int j=0;j<i;j++) {
@@ -39,7 +40,8 @@ public class LC_354_RussianDollEnvelopes {
         				dp[i] = dp[j]+1;
         		}
         	}
+        	max = max<dp[i]?dp[i]:max;
         }
-        return dp[len-1];
+        return max;
     }
 }
