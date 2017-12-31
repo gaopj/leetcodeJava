@@ -16,6 +16,7 @@ public class LC_382_LinkedListRandomNode {
 	    ListNode head;
     public LC_382_LinkedListRandomNode(ListNode head) {
         this.head = head;
+        Character c = new Character('c');
     }
     
     /** Returns a random node's value. */
